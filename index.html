@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet">
+<title>My Family Book</title>
+</head> 
+<body>
+<h1>My Family Book</h1>
+<img id="img1" src="Family.jpg" height="400px" width="400px">
+<b><p id="firstp">Family</p></b>
+<br>
+<br>
+<button type="button" onclick="next_img()">Next</button>
+<script>
+    function next_img(){
+    var imgs = ["Family.jpg", "granny.jpg", "grandpa.jpg", "father.webp", "mum.jpg", "sharvil.jpg" ];
+    var names = ["Family", "Asha Pande", "Ashok Pande", "Amogh Pande", "Shripriya Pande", "Sharvil Pande"];
+    var i = "";
+    
+        var currentdisplay = document.getElementById("firstp").innerText;
+        console.log(names);
+        console.log(imgs);
+        var newvalue="";
+        for (i=0;i<names.length;i++)
+        {
+            if(currentdisplay==names[i])
+            {
+                    newvalue=i+1;
+                    if(newvalue==names.length)
+                    {
+                        newvalue=0;
+                    }
+                    document.getElementById("firstp").innerHTML=names[newvalue];
+                    document.getElementById("img1").src=imgs[newvalue];
+            }
+                              
+            }
+        }
+        
+    
+         
+    
+    
+    
+    
+</script>
+</body>   
+</html>
